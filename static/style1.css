@@ -1,0 +1,170 @@
+#wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px; /* Add padding to the wrapper */
+}
+
+.card {
+  flex-basis: calc(50% - 40px); /* Adjust flex-basis to create gap between cards */
+  margin: 20px;
+  padding: 30px;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 0px 0px 30px -7px #525d6b;
+  display: flex;
+  flex-direction: column; /* Set flex-direction to column */
+}
+
+.card .work-rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center align items */
+}
+
+.card .work-rate p {
+  color: #eee;
+  background-color: #A569BD;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.card .pos-nd-loc p:first-child {
+  text-align: center;
+  font-size: 24px; /* Adjust font size */
+  font-weight: bold;
+  margin-bottom: 10px; /* Add some margin */
+}
+
+.card .pos-nd-loc p:last-child {
+  color: #3498DB;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Add some margin */
+}
+
+.tags button {
+  margin-right: 10px; /* Add some space between buttons */
+  background-color: white;
+  border: 0.5px solid #3498DB;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.tags button:last-child {
+  color: white;
+  background-color: #3498DB;
+}
+
+.card .job-desc {
+  padding: 10px 20px; /* Adjust padding */
+  line-height: 1.3;
+}
+
+.card .job-toggle {
+  margin: auto;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100px;
+  align-self: center;
+  background-color: #10f071;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card .job-toggle:hover {
+  background-color: #0df26c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.searchBox {
+  display: flex;
+  max-width: 220px;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  background: #2f3640;
+  border-radius: 50px;
+  position: relative;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 6px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+/*hover effect*/
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+  transform: translateY(-3px);
+}
+/*button pressing effect*/
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 24px 46px 24px 26px;
+}
+

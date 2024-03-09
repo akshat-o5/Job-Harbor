@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block home %}active{% endblock home%}
+
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock style %}
+
+{% block body %}
+
+
+{% comment %} hero section starts {% endcomment %}
+{% load static %}
+<div class="text-secondary px-4 py-5 text-center" style="background-image: url('{% static 'bg.jpg' %}'); background-size: cover; background-position: center;">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white"> Welcome to Job Harbor</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4"><b>Your Gateway to Exciting Career Opportunities</b></p>
+      </div>
+    </div>
+  </div>
+{% comment %} hero section ends {% endcomment %}
+<div class=" bg-dark p-2"></div>
+
+
+
+{% comment %} cards section starts {% endcomment %}
+<div class="my-3 container text-center">
+    <h1>Welcome to Job Harbor</h1>
+    <p>Explore a realm of professional development through our handpicked job and internship opportunities. Your ultimate resource for initiating and elevating your career journey.</p>
+  
+    <div class="row">
+      <div class="col-md-4 my-2">
+        <div class="book">
+          <h5 class="mx-5">Gain valuable hands-on experience and jumpstart your career with internship opportunities. <br> (Freshers)</h5>
+          <div class="cover">
+              <h1>Internships</h1>
+          </div>
+         </div>
+      </div>
+      <div class="col-md-4 my-2">
+        <div class="book">
+          <h5 class="mx-5">Explore entry-level opportunities to kickstart your career journey. <br> (0+ years)</h5>
+          <div class="cover">
+              <h1>Fresher Jobs</h1>
+          </div>
+         </div>
+      </div>
+      <div class="col-md-4 my-2">
+        <div class="book">
+          <h5 class="mx-5">Advance your career with exciting opportunities tailored for experienced professionals. <br> (3+ years)</h5>
+          <div class="cover">
+              <h1>Seasoned Jobs</h1>
+          </div>
+         </div>
+      </div>
+    </div>
+</div>
+{% comment %} cads section ends {% endcomment %}
+
+<div class=" bg-dark p-2"></div>
+
+
+{% comment %} about us starts {% endcomment %}
+<div class="container">
+    <div class="row">
+      <!-- Content Column -->
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p>
+          "JobHarbor" is a premier platform dedicated to facilitating career growth and fostering professional connections. With a robust database of job listings, internship programs, and comprehensive career resources, we empower individuals to discover meaningful opportunities aligned with their skills and aspirations. Our user-friendly interface and innovative features streamline the job search process, making it easier for both job seekers and employers to connect. Whether you're a recent graduate exploring entry-level positions or an experienced professional seeking new challenges, JobHarbor is your trusted partner in navigating the dynamic landscape of the job market. Join us today and embark on a rewarding journey towards achieving your career goals with JobHarbor!
+        </p>
+      </div>
+      <!-- Button Column -->
+      <div class="col-md-6 d-flex align-items-center justify-content-md-end">
+        <button class="btn btn-donate my-2"><a href="/about">Learn More</a></button>
+      </div>
+    </div>
+  </div>
+  
+  
+{% comment %} about us ends {% endcomment %}
+
+
+{% endblock body %}

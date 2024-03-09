@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Seasoned Jobs{% endblock title %}
+
+{% block job %}active{% endblock job %}
+
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+{% endblock style %}
+
+{% block body %}
+{% load markdown_extras %}
+{% load social_share %}
+{% for postItem in post %}
+<div class="container my-3 bg-light py-2 shadow-lg p-3 mb-5 bg-body rounded">
+    <div id="job-area" class="single-job-page">
+        <div class="job-header-area">
+          <div class="job-header-container">
+            <h1 class="job-header-content">
+              {{postItem.profile}}
+            </h1>
+            <h2>
+                {{postItem.company}}
+            </h2>
+          </div>
+          <div class="job-info-container">
+            <div class="city"><b>City:</b> {{postItem.location}}</div>
+            <div class="posted-date"><b>Posted Date:</b> {{postItem.postTime}}</div>
+            <div class="salary"><b>Salary:</b> Based on Company Standards</div>
+          </div>
+        </div>
+        
+        <div class="job-main">
+          <div class="job-description-header">
+            <h2 class="job-description-content">Job Description
+          </h2>
+          <button class="apply-now-button"><a href="{{postItem.link}}">Apply Now</a></button>
+          </div>
+          <hr>
+          <div class="job-description-text">
+            {{postItem.description | markdown | safe}}
+          </div>
+        </div>
+        <div class="social-sharing">
+            <h3>Share this content:</h3>
+            {% post_to_facebook object_or_url "Post to Facebook!" %}
+            {% post_to_whatsapp object_or_url "Share via WhatsApp" %}
+            {% post_to_telegram object_or_url "Share via telegram"%}
+        </div>
+    </div>  
+</div>
+{% endfor %}
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block about %}active{% endblock about %}
+
+
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+{% endblock style %}
+
+
+
+{% block body %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center" style="background-color: #333;">
+    <div class="d-flex flex-wrap justify-content-center align-items-center">
+        <div style="flex: 1;">
+            <h1 style="color:white;">About Us</h1>
+        </div>
+    </div>
+</div> 
+<div class="container my-3">
+    <div class="content ">   
+        <h2>Job Harbor</h2>
+        <p>At Job Harbor, we are committed to revolutionizing the way individuals navigate the job and internship landscape. Our platform is designed to provide a seamless experience, offering a diverse range of opportunities tailored to your unique preferences and requirements. Here's why Job Harbor stands out:</p>
+        <ul>
+            <li><strong>Diverse Range of Opportunities:</strong> We pride ourselves on offering a wide variety of internships and job opportunities across various industries and sectors. Whether you're a recent graduate seeking your first job or a seasoned professional looking for a career change, Job Harbor has something for everyone.</li>
+            <li><strong>Easy Filtering Options:</strong> Searching for the perfect job or internship shouldn't be a hassle. With Job Harbor, you can easily filter opportunities based on your specific criteria, including location, industry, job type, and more. Our intuitive filtering options ensure that you find the opportunities that best match your needs with just a few clicks.</li>
+            <li><strong>Fresh Job and Internship Openings:</strong> We understand the importance of staying up-to-date with the latest job and internship openings. That's why we regularly update our database, discarding old listings to make room for new and exciting opportunities. This ensures that you always have access to the most relevant and current openings in your field.</li>
+            <li><strong>Personalized Experience:</strong> At Job Harbor, we prioritize your experience above all else. Our platform is designed to provide a personalized user experience, delivering tailored recommendations and insights based on your interests and preferences. Whether you're exploring new career paths or advancing your current trajectory, Job Harbor is here to support you every step of the way.</li>
+            <li><strong>Commitment to Excellence:</strong> We are dedicated to excellence in everything we do. From our user-friendly interface to our comprehensive job listings, we strive to exceed your expectations and provide unparalleled service at every turn. Your success is our success, and we are committed to helping you achieve your career goals.</li>
+        </ul>
+        <p>In summary, Job Harbor is more than just a job and internship platform – it's a gateway to new opportunities, growth, and success. Join us on our mission to connect talent with opportunity and unlock the potential of the global workforce. Welcome aboard!</p>
+    </div>
+    
+</div>
+{% endblock body %}

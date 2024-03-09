@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block contact %}active{% endblock contact %}
+
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'style3.css' %}">
+{% endblock style %}
+
+{% block styleicon %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock styleicon %}
+
+
+
+{% block body %}
+
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center" style="background-color: #333;">
+    <div class="d-flex flex-wrap justify-content-center align-items-center">
+        <div style="flex: 1;">
+            <h1 style="color:white;">Contact US</h1>
+            <p class="fs-5 text-body-secondary" style="color:white;">Free free to contact us for any inquiries or assistance.</p>
+        </div>
+    </div>
+</div>     
+
+{% if error_message %}
+<div class="alert alert-danger" role="alert">
+    {{ error_message }}
+</div>
+{% endif %}
+
+{% if success_message %}
+<div class="alert alert-success" role="alert">
+    {{ success_message }}
+</div>
+{% endif %}
+
+<div class="form-container container flex space-between my-3">
+    <form class="form" method="post" action='/contact'>
+        {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Contact Number</label>
+        <input type="number" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="desc">How Can We Help You?</label>
+        <textarea name="desc" id="desc" rows="10" cols="50" required></textarea>
+      </div>
+      <button class="form-submit-btn" type="submit">Submit</button>
+    </form>
+  </div>
+
+
+  <div class=" bg-dark p-2"></div>
+
+
+
+  <div class="container my-3">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center" style="background-color: #333;">
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <div style="flex: 1;">
+                <h1 style="color:white;">Connect with our Socials</h1>
+            </div>
+        </div>
+    </div> 
+    <div class="social container my-3">
+        <a href="https://facebook.com/ondrej.p.barta" class="link linkedin" target="_parent"><span class="fa fa-linkedin"></span></a>
+        <a href="https://plus.google.com/+OndřejBárta-Otaku" class="link instagram" target="_parent"><span class="fa fa-instagram"></span></a>
+      </div>
+  </div>
+
+
+{% endblock body %}

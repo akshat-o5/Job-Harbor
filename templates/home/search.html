@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Search{% endblock title %}
+
+{% block job %}active{% endblock job %}
+
+
+{% block style %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+{% endblock style %}
+
+{% block body %}
+
+<div class="container">
+    <div class="py-3 text-center">
+        <h2>Search results</h2>
+    </div>
+
+
+    {% if allPosts|length < 1 %}
+    <p>Your search - <b>{{query}}</b> - did not match any documents. <br>Suggestions:
+        <ul>
+            <li>Make sure that all words are spelled correctly.</li>
+            <li>Try more general keywords.</li>
+            <li>Try different keywords.</li>
+        </ul>
+    </p>
+    {% endif %}
+
+
+    {% for posts in allPosts %}
+    
+    
+    <div class="container">
+        <div class="row">
+            {% load markdown_extras %}
+            {% for posts in allPosts %}
+            <div class="col-md-6">
+                <div class="card card-1">
+                    <div class="work-rate">
+                        <p>{{ posts.experience }}</p>
+                        <p>{{ posts.location }}</p>
+                    </div>
+                    <div class="pos-nd-loc">
+                        <p class="job-title">{{ posts.profile }}</p>
+                        <p class="location" style="font-size:18px;">{{ posts.company }}</p>
+                    </div>
+                    <p class="job-desc">
+                        {{posts.description | truncatechars:100 | markdown | safe}}
+                    </p>
+                    <button class="job-toggle"><a style="color:white;" href="{{posts.slug}}">View</a></button>
+                    {% comment %} <p class="job-toggle"><a href="{{posts.slug}}">View</a></p> {% endcomment %}
+                    <p class="my-2"><b>Posted on:</b> {{posts.postTime}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+      {% endfor %}
+
+{% endblock body %}
