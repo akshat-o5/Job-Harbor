@@ -1,13 +1,14 @@
 {
-  "builds": [{
+  "builds": [
+    {
       "src": "jobharbor/wsgi.py",
-      "use": "@ardnt/vercel-python-wsgi",
-      "config": { "maxLambdaSize": "15mb" }
-  }],
+      "use": "@vercel/python"
+    }
+  ],
   "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "jobharbor/wsgi.py"
-      }
+    {
+      "src": "/(.*)",
+      "dest": "jobharbor/wsgi.py"
+    }
   ]
 }
