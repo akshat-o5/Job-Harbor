@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "jobharbor/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "jobharbor/wsgi.py"
+      }
+    ]
+}

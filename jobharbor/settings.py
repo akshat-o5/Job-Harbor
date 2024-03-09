@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'jobharbor.wsgi.application'
+WSGI_APPLICATION = 'jobharbor.wsgi.app'
 
 
 # Database
