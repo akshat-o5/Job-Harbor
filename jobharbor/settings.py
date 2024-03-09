@@ -85,16 +85,16 @@ WSGI_APPLICATION = 'jobharbor.wsgi.app'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
    
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'jobharbor',
-#         'USER': 'root',
-#         'PASSWORD': 'klaus@17320',
-#         'HOST':'localhost',
-#         'PORT':'3306',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'jobharbor',
+        'USER': 'root',
+        'PASSWORD': 'klaus@17320',
+        'HOST':'localhost',
+        'PORT':'3306',
+    }
+}
 
 
 # Password validation
